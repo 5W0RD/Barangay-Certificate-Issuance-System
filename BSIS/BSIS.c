@@ -18,7 +18,7 @@ void fillUpForm(struct Resident *r) {
     printf("Fill up the questions\n");
 
     printf("Name: ");
-    scanf(" %s", r->name);  // allows spaces
+    scanf(" %s", r->name);
 
     printf("Age: ");
     scanf("%d", &r->age);
@@ -65,8 +65,7 @@ void viewResident(struct Resident *r, bool filled) {
 int main() {
     int choice;
     struct Resident r;
-    bool residentAdded = false;  // tracks if a resident has been added
-
+    bool residentAdded = false;
     while (true) {
         printf("\nWelcome to Barangay Villaflor\nSelect your option:\n1. Assistant\n2. Resident\n");
         scanf("%d", &choice);
@@ -105,3 +104,4 @@ int main() {
 
     return 0;
 }
+
