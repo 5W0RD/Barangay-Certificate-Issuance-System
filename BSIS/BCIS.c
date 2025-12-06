@@ -13,13 +13,13 @@ struct Resident {
     int purok;
 };
 
-void fillUpForm(struct Resident *r) {
+void fillUpForm(struct Resident *r) {       // r is like a folder to store data
     printf("Fill up the questions\n");
 
     printf("Name: ");
-    scanf(" %s", r->name);
-
-    printf("Age: ");
+    scanf(" %s", r->name);              // actually 1 word ra ang ma input nimo kay mu end siya sa space
+                                        // kailangan ka mag fgets arun maka input kag multiple words
+    printf("Age: ");                    // but wla paman nimo na discuss sooo ayun sya :)
     scanf("%d", &r->age);
 
     printf("Sex: ");
@@ -60,9 +60,9 @@ void viewAllResidents(struct Resident residents[], int count) {
         printf("Contact Number: %d\n", residents[i].contact_number);
         printf("Purpose: %s\n", residents[i].purpose);
         printf("Purok: %d\n", residents[i].purok);
-        printf("-----------------------------------\n");
+        
     }
-    printf("===================================\n");
+    
 }
 
 void searchResident(struct Resident residents[], int count) {
@@ -86,7 +86,6 @@ void searchResident(struct Resident residents[], int count) {
             printf("Contact Number: %d\n", residents[i].contact_number);
             printf("Purpose: %s\n", residents[i].purpose);
             printf("Purok: %d\n", residents[i].purok);
-            printf("----------------------------\n");
             return;
         }
     }
