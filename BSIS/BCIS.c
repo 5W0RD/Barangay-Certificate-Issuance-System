@@ -93,7 +93,8 @@ int searchResident(struct Resident residents[], int count) {
 
     char searchName[50];
     printf("Enter your name: ");
-    scanf(" %s", searchName);
+    fgets(searchName, sizeof(searchName), stdin);
+    searchName[strcspn(searchName, "\n")] = 0;
 
     for (int i = 0; i < count; i++) {
         if (strcmp(residents[i].name, searchName) == 0) {
@@ -197,3 +198,4 @@ int main() {
 
     return 0;
 }
+
