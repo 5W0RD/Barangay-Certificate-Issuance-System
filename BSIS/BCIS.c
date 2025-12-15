@@ -78,7 +78,7 @@ void certificateMenu() {
     printf("\nProcessing certificate for: %s\n", fullName);
     printf("Please wait while we prepare your certificate...\n");
 
-    for (int i = 5; i > 0; i--) {
+    for (int i = 20; i > 0; i--) {
         printf("Please wait... %d seconds remaining\r", i);
         fflush(stdout);
         Sleep(1000);
@@ -200,4 +200,5 @@ int main() {
 
     return 0;
 }
+
 
